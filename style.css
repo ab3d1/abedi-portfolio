@@ -204,32 +204,33 @@ header {
 }
 
 /* Footer */
-footer {
+footer.py-3.my-4 {
   background-color: var(--secondary-color);
   color: white;
   padding: 3rem 0;
   text-align: center;
 }
 
-.footer-links {
+footer .nav {
   display: flex;
   justify-content: center;
   margin-bottom: 1.5rem;
+  border-bottom: none; /* optional: remove border if you want */
 }
 
-.footer-links a {
-  color: white;
+footer .nav-link {
+  color: white !important; /* override Bootstrap's text-body-secondary */
   margin: 0 1rem;
   text-decoration: none;
   transition: var(--transition);
   position: relative;
 }
 
-.footer-links a:hover {
-  color: var(--accent-color);
+footer .nav-link:hover {
+  color: var(--accent-color) !important;
 }
 
-.footer-links a:after {
+footer .nav-link::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -240,14 +241,15 @@ footer {
   transition: var(--transition);
 }
 
-.footer-links a:hover:after {
+footer .nav-link:hover::after {
   width: 100%;
 }
 
-.copyright {
-  color: rgba(255, 255, 255, 0.7);
+footer p.text-body-secondary {
+  color: rgba(255, 255, 255, 0.7) !important;
   font-size: 0.9rem;
 }
+
 
 /* Buttons */
 .btn-primary {
